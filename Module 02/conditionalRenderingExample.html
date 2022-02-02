@@ -1,0 +1,21 @@
+<template>
+    <lightning-layout horizontal-align="spread">
+        <lightning-layout-item size="5">            
+                <h1>Permanent Address</h1>                    
+                <p>Enter permanent address as in govt. ID</p>                
+                <lightning-input type="text" label="Address line 1" name="permline1" onchange={handleAddr}></lightning-input>
+                <lightning-input type="text" label="Address line 2" name="permline2" onchange={handleAddr}></lightning-input>
+                <lightning-input type="text" label="Landmark" name="permLandmark" onchange={handleAddr}></lightning-input>
+                <lightning-input type="text" label="Zipcode" name="permZip" onchange={handleAddr}></lightning-input>   
+        </lightning-layout-item>
+        <lightning-layout-item size="5">
+            <h2>Current Address</h2>
+            <lightning-input type="checkbox" label="Same as present address" name="chkbox" onclick={copyAddress}></lightning-input>            
+            <lightning-input type="text" label="Address line 1" value={addr1} name="currline1"></lightning-input>
+            <lightning-input type="text" label="Address line 2" value={addr2} name="currline2"></lightning-input>
+            <lightning-input type="text" label="Landmark" value={addrLand} name="currLandmark"></lightning-input>
+            <lightning-input type="text" label="Zipcode" value={addrZip} name="currZip"></lightning-input>            
+    </lightning-layout-item>
+    </lightning-layout>
+    
+</template>
